@@ -4,3 +4,57 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+    --accent-color: #000;
+    --main-text: 'Inter';
+    --accent-text: 'PressStart2P';
+    --weight: 400;
+    --weight-title: 700;
+    --bg-color: #FFF;
+    --backgroud-gradient: 
+        repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+        repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+        linear-gradient(#e7e7e7, #1a1a1a);
+        --lable-shadow: #fff;
+    --filling-button-color:  #fff;
+    --fill-color: #F00;
+    --counter-color: var(var(--accent-color));
+}
+
+@media (prefers-color-scheme: light) {
+    /* stylelint-disable-next-line rule-empty-line-before */
+    :root {   
+        --accent-color: #000;
+        --main-text: 'Inter';
+        --accent-text: 'PressStart2P';
+        --weight: 400;
+        --weight-title: 700;
+        --bg-color: #FFF;
+        --backgroud-gradient: 
+            repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+            repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+            linear-gradient(#e7e7e7, #1a1a1a);
+        --lable-shadow: #fff;
+        --filling-button-color:  #fff;
+        --fill-color: #F00;
+        --counter-color: var(var(--accent-color));
+    }
+}
+
+:root.theme-dark {
+    --accent-color: #00CC14;
+    --main-text: 'Inter';
+    --accent-text: 'PressStart2P';
+    --weight: 465;
+    --weight-title: 785;
+    --bg-color: #000;
+    --backgroud-gradient: 
+        repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
+        repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
+        linear-gradient(#007f0c, #004306);
+    --lable-shadow: #000;
+    --filling-button-color: #00CC14;
+    --fill-color: #F00;
+    --counter-color: var(var(--accent-color));
+}
