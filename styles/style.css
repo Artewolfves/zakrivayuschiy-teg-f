@@ -18,24 +18,24 @@
   min-inline-size: 375px;
   max-width: 1440px;
   min-block-size: 100dvb;
-  font-family: var(--main-text), "Arial", sans-serif;
-  color: var(--accent-color);
-  font-variation-settings: 'wgth' var(--weight);
-  background-color: var(--bg-color);
-  background-image: var(--backgroud-gradient);
+  font-family: var(--main-text, 'Inter'), 'Arial', sans-serif;
+  color: var(--accent-color, #00CC14);
+  font-variation-settings: 'wgth' var(--weight, 465);
+  background-color: var(--bg-color, #000);
+  background-image: var(--backgroud-gradient, repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(#000 0 2px, transparent 2px 4px), linear-gradient(#007f0c, #004306));
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
 }
 
 .header {
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #00CC14);
   margin-block-start: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 700px;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #000);
   justify-content: center;
   margin-inline-start: auto;
   margin-inline-end: auto;
@@ -46,14 +46,15 @@
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
   font-weight: 400;
-  font-family: var(--accent-text);
+  font-family: var(--accent-text, 'PressStart2P'), sans-serif;
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+  text-decoration: none;
 }
 
 .header__text {
   text-transform: uppercase;
   font-weight: 400;
-  font-family: var(--accent-text);
+  font-family: var(--accent-text, 'PressStart2P'), sans-serif;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   padding-block-start: 20px;
   padding-block-end: 25px;
@@ -64,9 +65,9 @@
   border: none;
   text-transform: uppercase;
   font-weight: 400;
-  font-family: var(--accent-text);
+  font-family: var(--accent-text, 'PressStart2P'), sans-serif;
   font-size: 14px;
-  color: var(--accent-color);
+  color: var(--accent-color, #00CC14);
 }
 
 .theme-menu__button:focus {
@@ -103,7 +104,7 @@
   width: 0%;
   height: 2px;
   margin-top: 1px;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #00CC14);
   transition: width 0.3s ease;
 }
 
@@ -131,24 +132,21 @@
 .card {
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #000);
   max-width: clamp(23.4375rem, 0rem + 100vw, 43.75rem);
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #00CC14);
 }
 
 .title {
   font-size: 18px;
-  font-weight: var(--weight-title);
+  font-variation-settings: 'wgth' var(--weight-title, 785);
   padding: 5px 10px;
-}
-
-.title__border {
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color, #00CC14);
   width: 100%;
 }
 
 .main__block {
-  border-top: 2px solid var(--accent-color);
+  border-top: 2px solid var(--accent-color, #00CC14);
   width: 100%;
   padding: 25px;
 }
@@ -169,20 +167,21 @@
 .lable {
   position: absolute;
   inset: 24px 11px auto auto;
-  font-family: var(--accent-text), sans-serif;
+  font-family: var(--accent-text, 'PressStart2P'), sans-serif;
   font-size: 14px;
-  color: var(--accent-color);
+  color: var(--accent-color, #00CC14);
   mix-blend-mode: hard-light;
-  text-shadow: 1px 1px var(--lable-shadow),
-  -1px -1px var(--lable-shadow);
+  text-shadow: 1px 1px var(--lable-shadow, #000),
+  -1px -1px var(--lable-shadow, #000);
   opacity: 0.5;
+  margin-inline-end: 15px;
 }
 
 @supports((text-stroke: 1px var(--lable-shadow)) or (-webkit-text-stroke: 1px var(--lable-shadow))) {
 
   .lable {
-      -webkit-text-stroke: 1px var(--lable-shadow);
-      text-stroke: 1px var(--lable-shadow);
+      -webkit-text-stroke: 1px var(--lable-shadow, #000);
+      text-stroke: 1px var(--lable-shadow, #000);
       text-shadow: none;
   }
 } 
@@ -197,7 +196,8 @@
 
 .card__icon-button {
   background-color: transparent;
-  border: none;
+  height: 38px;
+  border: 2px solid transparent;
 }
 
 .card__icon-button:focus {
@@ -206,8 +206,8 @@
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color);
-  transition: 0.3s ease;
+  border: 2px solid var(--accent-color, #00CC14);
+  transition: border 0.3s ease;
 }
 
 .button__block {
@@ -215,41 +215,41 @@
   justify-content: flex-end;
   margin-block-end: 18px;
   margin-inline-end: 25px;
+  align-items: center;
+}
+
+.button {
+  background-color: var( --bg-color, #000);
+  border: 2px solid var(--accent-color, #00CC14);
+  position: relative;
+  min-height: 38px;
 }
 
 .card__like-button {
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
-  padding-inline: 35px;
-  height: 38px;
-  position: relative;
+  width: 130px;
 }
 
 .save__block {
   display: flex;
   justify-content: center;
   margin-block-start: 50px;
-  margin-block-end: 50px;
+  margin-block-end: 103px;
 }
 
 .card__save-button {
-  position: relative;
-  background-color: var( --bg-color);
-  border: 2px solid var(--accent-color);
   padding-inline: 19px;
-  height: 38px;
 }
 
 .card__save-button:focus,
 .card__like-button:focus {
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #00CC14);
   outline: none;
 }
 
 .card__save-button:focus-visible,
 .card__like-button:focus-visible {
-  box-shadow:  2px 2px 0 var(--accent-color);
-  border: 2px solid var(--accent-color);
+  box-shadow:  2px 2px 0 var(--accent-color, #00CC14);
+  border: 2px solid var(--accent-color, #00CC14);
   transition: 0.3s ease;
 }
 
@@ -263,7 +263,7 @@
   content: "";
   position: absolute;
   width: 100%;
-  background-color: var(--filling-button-color);
+  background-color: var(--filling-button-color, #00CC14);
   inset: 0 auto 0 0;
   mix-blend-mode: difference;
 }
@@ -274,9 +274,9 @@
 
 .button__text {
   font-weight: 400;
-  font-family: var(--accent-text), sans-serif;
+  font-family: var(--accent-text, 'PressStart2P'), sans-serif;
   font-size: 14px;
-  color: var(--accent-color);
+  color: var(--accent-color, #00CC14);
   line-height: 12.6px;
 }
 
@@ -300,19 +300,19 @@ dialog::backdrop {
 }
 
 .dialog__card {
-  border: 2px solid var(--accent-color);
-  background-color: var(--bg-color);
-  color: var(--accent-color);
+  border: 2px solid var(--accent-color, #00CC14);
+  background-color: var(--bg-color, #000);
+  color: var(--accent-color, #00CC14);
   width: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
-  height: clamp(11.9375rem, 11.8935rem + 0.1878vw, 12.0625rem);
+  padding: 30px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 28px;
 }
 
 dialog[open] {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 30px;
-  gap: 30px;
+
 }
 
 dialog .button__text {
@@ -321,7 +321,7 @@ dialog .button__text {
 }
 
 .save__block .card__save-button {
-  height: 55px;
+  min-height: 55px;
 }
 
 .text__floopy {
@@ -373,7 +373,7 @@ dialog .button__text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 84px;
+    min-height: 84px;
     gap: 8px;
     justify-content: center;
   }
@@ -381,5 +381,13 @@ dialog .button__text {
   .icon__floppy {
     height: 28px;
     width: 28px;
+  }
+
+  .save__block {
+    margin-block-end: 100px;
+  }
+
+  .lable {
+    margin-inline-end: 0;
   }
 }
