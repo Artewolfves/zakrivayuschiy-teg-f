@@ -403,11 +403,11 @@ dialog .card__save-button {
 @supports (font-variation-settings: normal) {
 
   .page {
-    font-variation-settings: "wght" var(--weight, 465);
+    font-variation-settings: "wght" var(--weight);
   }
 
   .title {
-    font-variation-settings: "wght" var(--weight-title, 785);
+    font-variation-settings: "wght" var(--weight-title);
   }
 
 }

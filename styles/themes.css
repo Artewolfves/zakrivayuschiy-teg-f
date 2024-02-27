@@ -8,8 +8,8 @@
 
 :root.theme-light {
     --accent-color: #000;
-    --weight: 400;
-    --weight-title: 700;
+    --weight: "wght" 400;
+    --weight-title: "wght" 700;
     --bg-color: #FFF;
     --backgroud-gradient: 
         repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
@@ -23,8 +23,8 @@
 
     :root {
         --accent-color: #000;
-        --weight: 400;
-        --weight-title: 700;
+        --weight: "wght" 400;
+        --weight-title: "wght" 700;
         --bg-color: #FFF;
         --backgroud-gradient: 
             repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
@@ -38,8 +38,8 @@
 
 :root.theme-dark {
     --accent-color: #00CC14;
-    --weight: 465;
-    --weight-title: 785;
+    --weight: "wght" 465;
+    --weight-title: "wght" 785;
     --bg-color: #000;
     --backgroud-gradient: 
         repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
