@@ -19,6 +19,7 @@
 }
 
 @media (prefers-color-scheme: light) {
+    
     :root {   
         --accent-color: #000;
         --weight: 400;

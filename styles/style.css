@@ -312,7 +312,6 @@ dialog::backdrop {
 
 dialog[open] {
   display: flex;
-
 }
 
 dialog .button__text {
