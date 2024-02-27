@@ -20,7 +20,7 @@
   min-block-size: 100dvb;
   font-family: var(--main-text, 'Inter'), 'Arial', sans-serif;
   color: var(--accent-color, #00CC14);
-  font-variation-settings: "wgth" var(--weight, 465);
+  font-variation-settings: "wgth" var(--weight);
   background-color: var(--bg-color, #000);
   background-image: var(--backgroud-gradient, repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(#000 0 2px, transparent 2px 4px), linear-gradient(#007f0c, #004306));
   background-position: center;
@@ -139,7 +139,7 @@
 
 .title {
   font-size: 18px;
-  font-variation-settings: "wgth" var(--weight-title, 785);
+  font-variation-settings: "wgth" var(--weight-title);
   padding: 5px 10px;
   border-bottom: 2px solid var(--accent-color, #00CC14);
   width: 100%;
@@ -403,7 +403,7 @@ dialog .card__save-button {
 @supports (font-variation-settings: normal) {
 
   .page {
-    font-variation-settings: "wght" var( --weight, 465);
+    font-variation-settings: "wght" var(--weight, 465);
   }
 
   .title {

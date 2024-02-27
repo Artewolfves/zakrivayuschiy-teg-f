@@ -21,7 +21,7 @@
 
 @media (prefers-color-scheme: light) {
 
-    :root {   
+    :root {
         --accent-color: #000;
         --weight: 400;
         --weight-title: 700;
@@ -33,6 +33,7 @@
         --lable-shadow: #fff;
         --filling-button-color:  #fff;
     }
+
 }
 
 :root.theme-dark {
