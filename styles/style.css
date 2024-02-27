@@ -310,6 +310,7 @@ dialog::backdrop {
   gap: 28px;
 }
 
+
 dialog[open] {
   display: flex;
 }
@@ -317,6 +318,10 @@ dialog[open] {
 dialog .button__text {
   text-transform: uppercase;
   line-height: 21px;
+}
+
+dialog .card__save-button {
+  padding-inline: 130px;
 }
 
 .save__block .card__save-button {
@@ -350,7 +355,7 @@ dialog .button__text {
   filter: grayscale(70%);
 }
 
-.hue-rotate{
+.hue-rotate {
   filter: hue-rotate(180deg);
 }
 
@@ -389,4 +394,20 @@ dialog .button__text {
   .lable {
     margin-inline-end: 0;
   }
+
+  dialog .card__save-button {
+    padding-inline: 120px;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+
+  .page {
+    font-variation-settings: 'wght' var( --weight, 465);
+  }
+
+  .title {
+    font-variation-settings: 'wght' var(--weight-title, 785);
+  }
+
 }
