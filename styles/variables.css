@@ -2,10 +2,10 @@
 
 :root {
     --accent-color: #00CC14;
-    --main-text: "Inter";
-    --accent-text: "PressStart2P";
-    --weight: "wght" 465;
-    --weight-title: "wght" 785;
+    --main-text: 'Inter';
+    --accent-text: 'PressStart2P';
+    --weight: 465;
+    --weight-title: 785;
     --bg-color: #000;
     --backgroud-gradient: 
         repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px),
