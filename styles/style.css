@@ -226,7 +226,7 @@
 }
 
 .card__like-button {
-  width: 130px;
+  min-width: 130px;
 }
 
 .save__block {
